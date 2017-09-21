@@ -1,0 +1,8 @@
+*.sw?
+*.py?
+exp*
+tmp*
+egs/*/data
+kaldi_d1e1e3b
+kaldi_python
+kaldi

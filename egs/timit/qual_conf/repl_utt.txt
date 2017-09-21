@@ -1,0 +1,16 @@
+mabc0_si1620 mabc0_si1620
+mabc0_si1620 madc0_si1367
+mabc0_si1620 faem0_si1392
+mabc0_si1620 fajw0_si1263
+madc0_si1367 mabc0_si1620
+madc0_si1367 madc0_si1367
+madc0_si1367 faem0_si1392
+madc0_si1367 fajw0_si1263
+faem0_si1392 mabc0_si1620
+faem0_si1392 madc0_si1367
+faem0_si1392 faem0_si1392
+faem0_si1392 fajw0_si1263
+fajw0_si1263 mabc0_si1620
+fajw0_si1263 madc0_si1367
+fajw0_si1263 faem0_si1392
+fajw0_si1263 fajw0_si1263

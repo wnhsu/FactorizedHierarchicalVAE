@@ -72,9 +72,7 @@ def train(exp_dir, set_name, model, train_set, dev_set,
     assert(n_steps_per_epoch > 0)
 
     model_dir = "%s/models" % exp_dir
-    fig_dir = "%s/log/train_fig/" % exp_dir
     check_and_makedirs(model_dir)
-    check_and_makedirs(fig_dir)
     ckpt_path = os.path.join(model_dir, "fhvae.ckpt")
     
     # create summaries

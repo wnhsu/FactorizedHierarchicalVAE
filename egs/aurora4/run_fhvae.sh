@@ -3,7 +3,7 @@
 # Copyright 2017 Wei-Ning Hsu
 # Apache 2.0 
 
-AURORA4_KALDI_EGS=/data/sls/scratch/yzhang87/code/kaldi/egs/aurora4/s5
+AURORA4_DIR=../../kaldi/egs/aurora4/s5
 feat_type=spec
 
 # input sections
@@ -36,7 +36,7 @@ fi
 set -eu
 
 if [ $stage -le -1 ]; then
-    ./local/${feat_type}_data_prep.sh --AURORA4_KALDI_EGS $AURORA4_KALDI_EGS || exit 1;
+    ./local/${feat_type}_data_prep.sh --AURORA4_KALDI_EGS $AURORA4_DIR || exit 1;
 fi
 
 tr_feat_rspec=scp:$feat_dir/$tr/feats.scp

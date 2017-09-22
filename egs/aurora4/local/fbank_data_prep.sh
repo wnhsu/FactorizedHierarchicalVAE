@@ -9,7 +9,7 @@
 stage=0
 nj=40
 
-AURORA4_DIR=/data/sls/scratch/yzhang87/code/kaldi/egs/aurora4/s5
+AURORA4_KALDI_EGS=
 egs_dir=$(pwd)/data
 fbank_conf=$(pwd)/conf/fbank.conf
 
@@ -39,14 +39,14 @@ dataset_cfg=$egs_dir/fbank_scp/${vae_tr}_tr90/$dataset_name
 if [ $stage -le 0 ]; then
     for d in $required; do
         steps/make_fbank.sh --nj $nj --fbank_conf $fbank_conf \
-            $AURORA4_DIR data/$d data/${d}_fbank $egs_dir/fbank_scp/$d || exit 1;
+            $AURORA4_KALDI_EGS data/$d data/${d}_fbank $egs_dir/fbank_scp/$d || exit 1;
     done
 fi
 
 if [ $stage -le 1 ]; then
     echo "$0: stage 1, split $vae_tr for train/valid sets"
     steps/subset_data_dir_tr_cv_by_utt.sh \
-        $AURORA4_DIR $egs_dir/fbank_scp/$vae_tr || exit 1;
+        $AURORA4_KALDI_EGS $egs_dir/fbank_scp/$vae_tr || exit 1;
     required="$required ${vae_tr}_tr90 ${vae_tr}_cv10"
 fi
 

@@ -1,6 +1,6 @@
 # Factorized Hierarchical Variational Autoencoders
 This repository contains the code to reproduce the core results from the paper 
-[Unsupervised Learning of Disentangled and Interpretable Representations from Sequential Data]().
+[Unsupervised Learning of Disentangled and Interpretable Representations from Sequential Data](https://arxiv.org/abs/1709.07902).
 
 To cite this work, please use
 ```

@@ -67,7 +67,7 @@ if [ $stage -le 3 ]; then
     echo "$0: stage 3, prepare utt2phoneid time-aligned labels"
     for s in $tr $dt $tt; do
         data_dir=$egs_dir/fbank_scp/$s
-        phn_scp=/data/sls/scratch/wnhsu/vae_gan/audio_encoder/egs/timit/data/${s}/phn.scp
+        phn_scp=$TIMIT_KALDI_EGS/data/local/data/${d}_phn.scp
         python src/tools/kaldi/phn_to_talabel.py \
             $phn_scp $map_file $data_dir/utt2phoneid.talabel \
             $data_dir/phone2phoneid || exit 1;
